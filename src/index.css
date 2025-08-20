@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Betting Platform Dark Theme */
+    --background: 230 15% 8%;
+    --foreground: 210 40% 98%;
+
+    --card: 230 15% 12%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 230 15% 12%;
+    --popover-foreground: 210 40% 98%;
+
+    /* Electric Blue Primary */
+    --primary: 206 100% 50%;
+    --primary-foreground: 230 15% 8%;
+
+    /* Dark Secondary */
+    --secondary: 230 15% 15%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 230 15% 18%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    /* Neon Accent */
+    --accent: 296 100% 60%;
+    --accent-foreground: 210 40% 98%;
+
+    /* Success/Win Green */
+    --success: 142 76% 36%;
+    --success-foreground: 210 40% 98%;
+
+    /* Danger/Loss Red */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    /* Warning Orange */
+    --warning: 38 92% 50%;
+    --warning-foreground: 230 15% 8%;
+
+    --border: 230 15% 20%;
+    --input: 230 15% 15%;
+    --ring: 206 100% 50%;
+
+    --radius: 0.75rem;
+
+    /* Custom Betting Colors */
+    --bet-win: 142 76% 36%;
+    --bet-loss: 0 84.2% 60.2%;
+    --bet-pending: 38 92% 50%;
+    --bet-void: 215 20.2% 65.1%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(206 100% 50%), hsl(296 100% 60%));
+    --gradient-card: linear-gradient(135deg, hsl(230 15% 12%), hsl(230 15% 15%));
+    --gradient-success: linear-gradient(135deg, hsl(142 76% 36%), hsl(120 100% 25%));
+    --gradient-danger: linear-gradient(135deg, hsl(0 84.2% 60.2%), hsl(0 100% 50%));
+
+    /* Shadows */
+    --shadow-glow: 0 0 30px hsl(206 100% 50% / 0.3);
+    --shadow-card: 0 8px 32px hsl(230 15% 4% / 0.6);
+    --shadow-hover: 0 12px 40px hsl(230 15% 4% / 0.8);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
